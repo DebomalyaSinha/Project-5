@@ -1,0 +1,243 @@
+
+:root {
+  --bg-main: #0b0e1a;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --bg-glass: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #ffffff;
+  --text-secondary: #b7c0ff;
+  --text-muted: #8b90b6;
+
+  --blue: #4f9cff;
+  --purple: #8b5cf6;
+  --pink: #c084fc;
+
+  --gradient-main: linear-gradient(
+    135deg,
+    #4f9cff,
+    #8b5cf6,
+    #c084fc
+  );
+
+  --radius-xl: 1.25rem;
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 25px rgba(139, 92, 246, 0.35);
+}
+
+
+body {
+  background: radial-gradient(
+      circle at top left,
+      rgba(79, 156, 255, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(139, 92, 246, 0.15),
+      transparent 40%
+    ),
+    var(--bg-main);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.qs-hero {
+  padding-bottom: 2rem;
+}
+
+.qs-title {
+  font-weight: 800;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+}
+
+.graident-text {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.qs-subtitle {
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+
+.qs-stat {
+  background: var(--bg-glass);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 1.25rem;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+}
+
+.qs-stat .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.qs-stat .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.qs-stat .value-small {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.qs-panel {
+  background: var(--bg-glass);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-soft);
+}
+
+.qs-online-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-soft);
+  color: var(--text-primary);
+}
+
+.card h2,
+.card h4 {
+  font-weight: 700;
+}
+
+
+.form-control,
+.form-select,
+textarea {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.25);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text-primary);
+}
+
+
+.btn-primary {
+  background: var(--gradient-main);
+  border: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-outline-primary {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-outline-primary:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.btn-outline-danger:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+
+.slot-card {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.slot-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--purple);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+}
+
+.slot-card.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+.booking-card {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.modal-content {
+  background: linear-gradient(
+    160deg,
+    rgba(20, 20, 40, 0.95),
+    rgba(10, 10, 20, 0.95)
+  );
+  border-radius: var(--radius-xl);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  filter: invert(1) drop-shadow(0 0 4px rgba(139, 92, 246, 0.8));
+  cursor: pointer;
+}
+
